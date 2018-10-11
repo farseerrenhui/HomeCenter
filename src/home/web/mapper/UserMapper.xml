@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="home.web.mapper.UserMapper">
+	<resultMap id="UserResultMap" type="home.web.bean.User">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="account" property="account" jdbcType="VARCHAR" />
+		<result column="pwd" property="pwd" jdbcType="VARCHAR" />
+		<result column="loginname" property="loginname" jdbcType="VARCHAR" />
+		<result column="department" property="department" jdbcType="VARCHAR" />
+	</resultMap>
+
+
+	<select id="getUserByAccountAndPwd" resultMap="UserResultMap">
+		select a.userid,a.username,a.loginname,a.password,a.identity,b.jobname,b.jobid,a.department from t_user a,t_job b,
+		user_job_relation c
+		where a.userid=c.userid and b.jobid=c.jobid
+		and loginname = #{loginname} and pwd= #{pwd}
+	</select>
+
+</mapper>
