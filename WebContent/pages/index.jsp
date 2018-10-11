@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/login.js" type="text/javascript"></script>
 <title>HomeCenter登录页</title>
 </head>
 <body>
-	<script src="${pageContext.request.contextPath}/js/login.js"
-		type="text/javascript"></script>
-	<form action="${pageContext.request.contextPath}/login">
+	<input type="hidden" id="base" value="${pageContext.request.contextPath}"/>
+	<!--  action="${pageContext.request.contextPath}/login" -->
+	<form id="form_login">
 		<div class="form-body">
 			<div>
 				<input type="text" name="account" />
@@ -20,6 +22,7 @@
 			<div>
 				<button type="submit">登录</button>
 			</div>
+			<button onclick="login()">button login</button>
 		</div>
 	</form>
 </body>
