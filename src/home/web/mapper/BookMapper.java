@@ -2,9 +2,6 @@ package home.web.mapper;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import home.web.bean.Book;
 
 public interface BookMapper {

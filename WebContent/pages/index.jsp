@@ -18,10 +18,7 @@
 			<div>
 				<input type="password" name="pwd" />
 			</div>
-			<div>
-				<button type="submit">登录</button>
-			</div>
-			<button onclick="login()">button login</button>
+			<button onclick="login()">登录</button>
 		</div>
 	</form>
 	<script>
