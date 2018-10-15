@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="${pageContext.request.contextPath}/js/jquery.min.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.js" type="text/javascript"></script>
 <title>HomeCenter登录页</title>
 </head>
 <body>

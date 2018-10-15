@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="${pageContext.request.contextPath}/js/jquery-1.8.2.js" type="text/javascript"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="${pageContext.request.contextPath}/js/vue.js"></script>
 <title>HomeCenter-main.jsp</title>
 </head>
