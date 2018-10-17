@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -18,20 +18,21 @@
 			<div>
 				<input type="password" name="pwd" />
 			</div>
-			<button onclick="login()">登录</button>
+			<button type="button" onclick="login()">登录</button>
 		</div>
 	</form>
 	<script>
 		function login() {
 			var loginname = $("input[name='account']").val();
 			var pwd = $("input[name='pwd']").val();
-			
+			alert("123");
+			alert($("#base").val()+"/login");
 			$.ajax({
 				url : $("#base").val()+"/login",
 				type : "post",
 				data : {
 		            'account':loginname,
-		            'pwd':pwd,
+		            'pwd':pwd
 		        },
 				success : function(result) {
 					if (result == "成功") {
@@ -41,7 +42,8 @@
 					}
 				},
 				error : function(result) {
-					alert("error"+result);
+					//console.log(result);
+					alert(result);
 				}
 			});
 		}

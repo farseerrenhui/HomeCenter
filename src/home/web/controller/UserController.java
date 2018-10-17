@@ -27,9 +27,9 @@ public class UserController {
 			Model model, HttpServletRequest request, HttpServletResponse response,
 			@RequestParam(value = "account") String account,
 			@RequestParam(value = "pwd") String pwd) {
-
+		
 		User user = userService.Login(account, pwd);
-				
+		
 		if (user != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);
